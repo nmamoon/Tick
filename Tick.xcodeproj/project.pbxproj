@@ -14,6 +14,30 @@
 		35624BD61EC2BA2E0015C4FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 35624BD41EC2BA2E0015C4FB /* LaunchScreen.storyboard */; };
 		35624BE11EC2BA2F0015C4FB /* TickTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35624BE01EC2BA2F0015C4FB /* TickTests.swift */; };
 		35624BEC1EC2BA2F0015C4FB /* TickUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35624BEB1EC2BA2F0015C4FB /* TickUITests.swift */; };
+		35624BFA1EC2BA730015C4FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 35624BF91EC2BA730015C4FB /* GoogleService-Info.plist */; };
+		35624BFC1EC2BEB00015C4FB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35624BFB1EC2BEB00015C4FB /* SignUpViewController.swift */; };
+		35624BFE1EC2BF6A0015C4FB /* TickViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35624BFD1EC2BF6A0015C4FB /* TickViewController.swift */; };
+		356E86FE1EC80D3F005FF35B /* ImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E86FD1EC80D3F005FF35B /* ImageTableViewCell.swift */; };
+		356E87001EC90563005FF35B /* BasicPostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E86FF1EC90563005FF35B /* BasicPostViewController.swift */; };
+		356E87021EC90577005FF35B /* ImagePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E87011EC90577005FF35B /* ImagePostViewController.swift */; };
+		356E87041EC9A2E5005FF35B /* FriendBioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E87031EC9A2E5005FF35B /* FriendBioViewController.swift */; };
+		356E87061ECDA5A2005FF35B /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356E87051ECDA5A2005FF35B /* BioViewController.swift */; };
+		35707A8F1EC6E4BA00CE7898 /* BasicPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35707A8E1EC6E4BA00CE7898 /* BasicPostCell.swift */; };
+		357AB7D41ED52B97005928BA /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357AB7D31ED52B97005928BA /* Channel.swift */; };
+		3585515F1EDA594800C5D804 /* PicViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3585515E1EDA594800C5D804 /* PicViewController.swift */; };
+		35A564ED1ED0FD9600F2661A /* WinningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A564EC1ED0FD9600F2661A /* WinningCell.swift */; };
+		35A564EF1ED0FDB900F2661A /* WaitingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A564EE1ED0FDB900F2661A /* WaitingCell.swift */; };
+		35A564F11ED0FE9900F2661A /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A564F01ED0FE9900F2661A /* CommentViewController.swift */; };
+		35ACBE3F1ED2781A00F7679A /* ImageWaitingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ACBE3E1ED2781A00F7679A /* ImageWaitingCell.swift */; };
+		35ACBE411ED3C10F00F7679A /* ImageWinningCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ACBE401ED3C10F00F7679A /* ImageWinningCell.swift */; };
+		35ACBE431ED5286F00F7679A /* ChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35ACBE421ED5286F00F7679A /* ChannelViewController.swift */; };
+		35BEE82A1ECFAB8700A5FC0C /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35BEE8291ECFAB8700A5FC0C /* InfoViewController.swift */; };
+		35C73DEC1EC3B6C7000D5371 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C73DEB1EC3B6C7000D5371 /* SignInViewController.swift */; };
+		35C73DF01EC3F672000D5371 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C73DEF1EC3F672000D5371 /* TestViewController.swift */; };
+		35C73DF21EC5A6B1000D5371 /* PostFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35C73DF11EC5A6B1000D5371 /* PostFeedViewController.swift */; };
+		759970887FF4D8A6CBD597C7 /* Pods_TickTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40CC3A8348E62E25CA4333FC /* Pods_TickTests.framework */; };
+		9F327AB75907AAD62C074CE6 /* Pods_Tick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1FC9AE969006E2FE9A4453C /* Pods_Tick.framework */; };
+		EFCF723F523F651A0210AAA5 /* Pods_TickUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E8C168F1BBC5C30EB323E41 /* Pods_TickUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +71,36 @@
 		35624BE71EC2BA2F0015C4FB /* TickUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35624BEB1EC2BA2F0015C4FB /* TickUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickUITests.swift; sourceTree = "<group>"; };
 		35624BED1EC2BA2F0015C4FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35624BF91EC2BA730015C4FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		35624BFB1EC2BEB00015C4FB /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		35624BFD1EC2BF6A0015C4FB /* TickViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TickViewController.swift; sourceTree = "<group>"; };
+		356E86FD1EC80D3F005FF35B /* ImageTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageTableViewCell.swift; sourceTree = "<group>"; };
+		356E86FF1EC90563005FF35B /* BasicPostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicPostViewController.swift; sourceTree = "<group>"; };
+		356E87011EC90577005FF35B /* ImagePostViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagePostViewController.swift; sourceTree = "<group>"; };
+		356E87031EC9A2E5005FF35B /* FriendBioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendBioViewController.swift; sourceTree = "<group>"; };
+		356E87051ECDA5A2005FF35B /* BioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		35707A8E1EC6E4BA00CE7898 /* BasicPostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicPostCell.swift; sourceTree = "<group>"; };
+		357AB7D31ED52B97005928BA /* Channel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Channel.swift; sourceTree = "<group>"; };
+		3585515E1EDA594800C5D804 /* PicViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicViewController.swift; sourceTree = "<group>"; };
+		35A564EC1ED0FD9600F2661A /* WinningCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinningCell.swift; sourceTree = "<group>"; };
+		35A564EE1ED0FDB900F2661A /* WaitingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaitingCell.swift; sourceTree = "<group>"; };
+		35A564F01ED0FE9900F2661A /* CommentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
+		35ACBE3E1ED2781A00F7679A /* ImageWaitingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWaitingCell.swift; sourceTree = "<group>"; };
+		35ACBE401ED3C10F00F7679A /* ImageWinningCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageWinningCell.swift; sourceTree = "<group>"; };
+		35ACBE421ED5286F00F7679A /* ChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelViewController.swift; sourceTree = "<group>"; };
+		35BEE8291ECFAB8700A5FC0C /* InfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		35C73DEB1EC3B6C7000D5371 /* SignInViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SignInViewController.swift; path = ../SignInViewController.swift; sourceTree = "<group>"; };
+		35C73DEF1EC3F672000D5371 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		35C73DF11EC5A6B1000D5371 /* PostFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostFeedViewController.swift; sourceTree = "<group>"; };
+		40CC3A8348E62E25CA4333FC /* Pods_TickTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A0D78672921E97DF1DC6521 /* Pods-Tick.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tick.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Tick/Pods-Tick.debug.xcconfig"; sourceTree = "<group>"; };
+		5D01E75DA6BA1137B4B3C46B /* Pods-TickTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TickTests/Pods-TickTests.release.xcconfig"; sourceTree = "<group>"; };
+		5F998117D9C572D9DAFBB098 /* Pods-TickUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-TickUITests/Pods-TickUITests.release.xcconfig"; sourceTree = "<group>"; };
+		63C98E518F2363A6CCBC0A96 /* Pods-Tick.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tick.release.xcconfig"; path = "Pods/Target Support Files/Pods-Tick/Pods-Tick.release.xcconfig"; sourceTree = "<group>"; };
+		69984698C7DD2FC553418BDE /* Pods-TickUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickUITests/Pods-TickUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6E8C168F1BBC5C30EB323E41 /* Pods_TickUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A5DB79785F1C3624BC49E08 /* Pods-TickTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickTests/Pods-TickTests.debug.xcconfig"; sourceTree = "<group>"; };
+		A1FC9AE969006E2FE9A4453C /* Pods_Tick.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tick.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F327AB75907AAD62C074CE6 /* Pods_Tick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				759970887FF4D8A6CBD597C7 /* Pods_TickTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +124,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EFCF723F523F651A0210AAA5 /* Pods_TickUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +138,8 @@
 				35624BDF1EC2BA2F0015C4FB /* TickTests */,
 				35624BEA1EC2BA2F0015C4FB /* TickUITests */,
 				35624BC91EC2BA2E0015C4FB /* Products */,
+				B4DBFD4745503462532CC7B0 /* Pods */,
+				D2F3115276BF58261844134C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,9 +159,30 @@
 				35624BCB1EC2BA2E0015C4FB /* AppDelegate.swift */,
 				35624BCD1EC2BA2E0015C4FB /* ViewController.swift */,
 				35624BCF1EC2BA2E0015C4FB /* Main.storyboard */,
+				35624BFD1EC2BF6A0015C4FB /* TickViewController.swift */,
+				35624BFB1EC2BEB00015C4FB /* SignUpViewController.swift */,
+				356E87011EC90577005FF35B /* ImagePostViewController.swift */,
+				35ACBE3E1ED2781A00F7679A /* ImageWaitingCell.swift */,
+				35A564EC1ED0FD9600F2661A /* WinningCell.swift */,
+				35A564EE1ED0FDB900F2661A /* WaitingCell.swift */,
+				35A564F01ED0FE9900F2661A /* CommentViewController.swift */,
+				3585515E1EDA594800C5D804 /* PicViewController.swift */,
+				356E86FF1EC90563005FF35B /* BasicPostViewController.swift */,
+				35707A8E1EC6E4BA00CE7898 /* BasicPostCell.swift */,
+				35C73DEB1EC3B6C7000D5371 /* SignInViewController.swift */,
+				35C73DF11EC5A6B1000D5371 /* PostFeedViewController.swift */,
+				35ACBE421ED5286F00F7679A /* ChannelViewController.swift */,
+				357AB7D31ED52B97005928BA /* Channel.swift */,
+				35ACBE401ED3C10F00F7679A /* ImageWinningCell.swift */,
+				35BEE8291ECFAB8700A5FC0C /* InfoViewController.swift */,
+				356E87051ECDA5A2005FF35B /* BioViewController.swift */,
+				356E87031EC9A2E5005FF35B /* FriendBioViewController.swift */,
+				356E86FD1EC80D3F005FF35B /* ImageTableViewCell.swift */,
+				35C73DEF1EC3F672000D5371 /* TestViewController.swift */,
 				35624BD21EC2BA2E0015C4FB /* Assets.xcassets */,
 				35624BD41EC2BA2E0015C4FB /* LaunchScreen.storyboard */,
 				35624BD71EC2BA2E0015C4FB /* Info.plist */,
+				35624BF91EC2BA730015C4FB /* GoogleService-Info.plist */,
 			);
 			path = Tick;
 			sourceTree = "<group>";
@@ -125,6 +205,29 @@
 			path = TickUITests;
 			sourceTree = "<group>";
 		};
+		B4DBFD4745503462532CC7B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4A0D78672921E97DF1DC6521 /* Pods-Tick.debug.xcconfig */,
+				63C98E518F2363A6CCBC0A96 /* Pods-Tick.release.xcconfig */,
+				9A5DB79785F1C3624BC49E08 /* Pods-TickTests.debug.xcconfig */,
+				5D01E75DA6BA1137B4B3C46B /* Pods-TickTests.release.xcconfig */,
+				69984698C7DD2FC553418BDE /* Pods-TickUITests.debug.xcconfig */,
+				5F998117D9C572D9DAFBB098 /* Pods-TickUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D2F3115276BF58261844134C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1FC9AE969006E2FE9A4453C /* Pods_Tick.framework */,
+				40CC3A8348E62E25CA4333FC /* Pods_TickTests.framework */,
+				6E8C168F1BBC5C30EB323E41 /* Pods_TickUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +235,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35624BF01EC2BA2F0015C4FB /* Build configuration list for PBXNativeTarget "Tick" */;
 			buildPhases = (
+				2B2C3524BC73414835B17285 /* [CP] Check Pods Manifest.lock */,
 				35624BC41EC2BA2E0015C4FB /* Sources */,
 				35624BC51EC2BA2E0015C4FB /* Frameworks */,
 				35624BC61EC2BA2E0015C4FB /* Resources */,
+				C3AF10FFCEA99B34DC1F9D7D /* [CP] Embed Pods Frameworks */,
+				5877B52283A5D19205F5C8BA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +255,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35624BF31EC2BA2F0015C4FB /* Build configuration list for PBXNativeTarget "TickTests" */;
 			buildPhases = (
+				99AB8F7A34AA7070F33EFE5E /* [CP] Check Pods Manifest.lock */,
 				35624BD81EC2BA2F0015C4FB /* Sources */,
 				35624BD91EC2BA2F0015C4FB /* Frameworks */,
 				35624BDA1EC2BA2F0015C4FB /* Resources */,
+				38351F4B721C9B40745D904C /* [CP] Embed Pods Frameworks */,
+				E423AE3EC5D1C35F06730B9A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +276,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35624BF61EC2BA2F0015C4FB /* Build configuration list for PBXNativeTarget "TickUITests" */;
 			buildPhases = (
+				C308D619DC3F4D4B919F40F6 /* [CP] Check Pods Manifest.lock */,
 				35624BE31EC2BA2F0015C4FB /* Sources */,
 				35624BE41EC2BA2F0015C4FB /* Frameworks */,
 				35624BE51EC2BA2F0015C4FB /* Resources */,
+				740D464F94AD8FF20B0384F0 /* [CP] Embed Pods Frameworks */,
+				E9601B2AC0306C4621E556D2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35624BD61EC2BA2E0015C4FB /* LaunchScreen.storyboard in Resources */,
+				35624BFA1EC2BA730015C4FB /* GoogleService-Info.plist in Resources */,
 				35624BD31EC2BA2E0015C4FB /* Assets.xcassets in Resources */,
 				35624BD11EC2BA2E0015C4FB /* Main.storyboard in Resources */,
 			);
@@ -257,13 +370,171 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B2C3524BC73414835B17285 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		38351F4B721C9B40745D904C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TickTests/Pods-TickTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5877B52283A5D19205F5C8BA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tick/Pods-Tick-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		740D464F94AD8FF20B0384F0 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TickUITests/Pods-TickUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AB8F7A34AA7070F33EFE5E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C308D619DC3F4D4B919F40F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C3AF10FFCEA99B34DC1F9D7D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Tick/Pods-Tick-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E423AE3EC5D1C35F06730B9A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TickTests/Pods-TickTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9601B2AC0306C4621E556D2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TickUITests/Pods-TickUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		35624BC41EC2BA2E0015C4FB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35624BFC1EC2BEB00015C4FB /* SignUpViewController.swift in Sources */,
+				356E87001EC90563005FF35B /* BasicPostViewController.swift in Sources */,
+				35C73DF21EC5A6B1000D5371 /* PostFeedViewController.swift in Sources */,
+				356E87061ECDA5A2005FF35B /* BioViewController.swift in Sources */,
+				35624BFE1EC2BF6A0015C4FB /* TickViewController.swift in Sources */,
+				3585515F1EDA594800C5D804 /* PicViewController.swift in Sources */,
+				35A564F11ED0FE9900F2661A /* CommentViewController.swift in Sources */,
+				356E87021EC90577005FF35B /* ImagePostViewController.swift in Sources */,
+				357AB7D41ED52B97005928BA /* Channel.swift in Sources */,
+				356E87041EC9A2E5005FF35B /* FriendBioViewController.swift in Sources */,
+				35A564ED1ED0FD9600F2661A /* WinningCell.swift in Sources */,
+				35ACBE411ED3C10F00F7679A /* ImageWinningCell.swift in Sources */,
+				356E86FE1EC80D3F005FF35B /* ImageTableViewCell.swift in Sources */,
 				35624BCE1EC2BA2E0015C4FB /* ViewController.swift in Sources */,
+				35C73DEC1EC3B6C7000D5371 /* SignInViewController.swift in Sources */,
+				35BEE82A1ECFAB8700A5FC0C /* InfoViewController.swift in Sources */,
+				35ACBE431ED5286F00F7679A /* ChannelViewController.swift in Sources */,
+				35ACBE3F1ED2781A00F7679A /* ImageWaitingCell.swift in Sources */,
+				35C73DF01EC3F672000D5371 /* TestViewController.swift in Sources */,
+				35707A8F1EC6E4BA00CE7898 /* BasicPostCell.swift in Sources */,
 				35624BCC1EC2BA2E0015C4FB /* AppDelegate.swift in Sources */,
+				35A564EF1ED0FDB900F2661A /* WaitingCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,12 +684,14 @@
 		};
 		35624BF11EC2BA2F0015C4FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4A0D78672921E97DF1DC6521 /* Pods-Tick.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 28EKRHDL6Z;
 				INFOPLIST_FILE = Tick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NabeelApps.Tick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NabeelApps.Tick.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -426,12 +699,14 @@
 		};
 		35624BF21EC2BA2F0015C4FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63C98E518F2363A6CCBC0A96 /* Pods-Tick.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 28EKRHDL6Z;
 				INFOPLIST_FILE = Tick/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.NabeelApps.Tick;
+				PRODUCT_BUNDLE_IDENTIFIER = com.NabeelApps.Tick.iOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -439,6 +714,7 @@
 		};
 		35624BF41EC2BA2F0015C4FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A5DB79785F1C3624BC49E08 /* Pods-TickTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -454,6 +730,7 @@
 		};
 		35624BF51EC2BA2F0015C4FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5D01E75DA6BA1137B4B3C46B /* Pods-TickTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -469,6 +746,7 @@
 		};
 		35624BF71EC2BA2F0015C4FB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 69984698C7DD2FC553418BDE /* Pods-TickUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28EKRHDL6Z;
@@ -483,6 +761,7 @@
 		};
 		35624BF81EC2BA2F0015C4FB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F998117D9C572D9DAFBB098 /* Pods-TickUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 28EKRHDL6Z;
@@ -514,6 +793,7 @@
 				35624BF21EC2BA2F0015C4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35624BF31EC2BA2F0015C4FB /* Build configuration list for PBXNativeTarget "TickTests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +802,7 @@
 				35624BF51EC2BA2F0015C4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35624BF61EC2BA2F0015C4FB /* Build configuration list for PBXNativeTarget "TickUITests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +811,7 @@
 				35624BF81EC2BA2F0015C4FB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
