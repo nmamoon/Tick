@@ -11,3 +11,7 @@ import Foundation
 var channel = "Default"
 
 var newUser = false
+
+var hidePosts = [String]()
+
+var blockedUsers = [String]()

@@ -31,6 +31,9 @@ class ChannelViewController: UIViewController {
         
         CancelButton.layer.masksToBounds = true
         CancelButton.layer.cornerRadius = 10
+        
+        ChannelText.layer.masksToBounds = true
+        ChannelText.layer.cornerRadius = 15
 
         // Do any additional setup after loading the view.
     }
@@ -48,7 +51,7 @@ class ChannelViewController: UIViewController {
     @IBAction func UpdatePressed(_ sender: UIButton) {
         if ChannelText.text != "" {
             let test = ChannelText.text!
-            if test != "Comments" && test != "Votes" && test != "Reveals" && test != "Users" && test != "CommentsCount" && test != "Postcount" {
+            if test != "Comments" && test != "Votes" && test != "Reveals" && test != "Users" && test != "CommentsCount" && test != "Postcount" && test != "Info" && test != "Reports" && test != "Decider" {
                 channel = test
          self.ref?.child("Channel").child((cUser?.displayName)!).setValue(test)
             ChannelText.endEditing(true)

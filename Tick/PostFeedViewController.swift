@@ -56,19 +56,65 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
     var idprep: String?
     var imageprep: UIImage?
     var profileprep: UIImage?
+    var waiting = false
     
     
     
     override func viewDidLoad() {
         
         ref = FIRDatabase.database().reference()
+        
+        
+        
+        self.ref?.child("Users").child((cUser?.displayName)!).child("Blocks").observeSingleEvent(of: .value, with: { (snapshot) in
+            let usersDict = snapshot.value as? NSDictionary
+            
+            if usersDict != nil {
+                blockedUsers = [String]()
+                for vall in (usersDict?.allKeys)! {
+                   blockedUsers.append(vall as! String)
+                    
+                }
+            } else {
+                //cell.UpvoteLabel.text = "0 UPVOTES"
+            }
+            
+            
+            
+        })
+        
+        self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.displayName)!).child("Hidings").observeSingleEvent(of: .value, with: { (snapshot) in
+            let usersDict = snapshot.value as? NSDictionary
+            
+            if usersDict != nil {
+                hidePosts = [String]()
+                for vall in (usersDict?.allKeys)! {
+                    hidePosts.append(vall as! String)
+                    
+                }
+                //self.performSegue(withIdentifier: "ToMain", sender: self)
+                //self.MyTable.reloadData()
+            } else {
+                //cell.UpvoteLabel.text = "0 UPVOTES"
+            }
+            
+            
+            
+        })
+        
+        
+        
+        
+        
+        
         super.viewDidLoad()
         PostButton.layer.cornerRadius = 15
         CancelButton.layer.cornerRadius = 15
         PostBox.layer.cornerRadius = 15
         AddPic.layer.cornerRadius = 15
         CancelPic.layer.cornerRadius = 15
-        TestImage.layer.cornerRadius = 15
+        TestImage.layer.masksToBounds = true
+        TestImage.layer.cornerRadius = 7
         ChannelTag.layer.masksToBounds = true
         ChannelTag.layer.cornerRadius = 15
         PostBox.delegate = self
@@ -124,6 +170,17 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
         }
         
         
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         ChannelTag.font = UIFont.boldSystemFont(ofSize: 14.0)
         ChannelTag.text = channel
         self.TableData = [[String]]()
@@ -155,6 +212,9 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
                     
                         self.ref?.child("Comments").child(vall as! String).removeValue()
                     
+                    
+                    
+                    } else  if (blockedUsers.contains(name as! String)) || (hidePosts.contains(vall as! String)) {
                     
                     
                     } else {
@@ -279,52 +339,70 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
     
     
     @IBAction func SendPressed(_ sender: Any) {
-        let cUser = FIRAuth.auth()?.currentUser
-        let posttext = PostBox.text
-        //self.ref?.child("Users").child((cUser?.uid)!).childByAutoId().setValue(posttext)
-        let form = DateFormatter()
-        let dateFormat = "yyyy-MM-dd HH:mm:ss.A"
-        form.dateFormat = dateFormat
-        let date = form.string(from: Date())
-        if usepic {
+        
+        print("yes1")
+        print(waiting)
+        if !waiting {
+            print("yes2")
             
-            let imageName = NSUUID().uuidString
-            let storageRef = FIRStorage.storage().reference().child(imageName)
-            if let upData = UIImagePNGRepresentation(picholder!) {
-                storageRef.put(upData, metadata: nil, completion:
-                    {(metadata, error) in
-                        if error != nil {
-                            //print(error!)
-                        }
-                        //print(metadata!)
-                        let url = metadata?.downloadURL()?.absoluteString
-                        self.ref?.child(channel).child("Posts").childByAutoId().setValue(["Name": cUser?.displayName!, "Date": date, "Text": posttext, "URL": url])
-                        self.viewDidAppear(true)
-                        
-                        
-                })
+            let cUser = FIRAuth.auth()?.currentUser
+            let posttext = PostBox.text
+            //self.ref?.child("Users").child((cUser?.uid)!).childByAutoId().setValue(posttext)
+            let form = DateFormatter()
+            let dateFormat = "yyyy-MM-dd HH:mm:ss.A"
+            form.dateFormat = dateFormat
+            let date = form.string(from: Date())
+            if usepic {
+                
+                let imageName = NSUUID().uuidString
+                let storageRef = FIRStorage.storage().reference().child(imageName)
+                if let upData = UIImagePNGRepresentation(picholder!) {
+                    storageRef.put(upData, metadata: nil, completion:
+                        {(metadata, error) in
+                            if error != nil {
+                                //print(error!)
+                            }
+                            //print(metadata!)
+                            let url = metadata?.downloadURL()?.absoluteString
+                            self.ref?.child(channel).child("Posts").childByAutoId().setValue(["Name": cUser?.displayName!, "Date": date, "Text": posttext, "URL": url])
+                            self.viewDidAppear(true)
+                            
+                            
+                    })
+                }
+                // let upData = UIImagePNGRepresentation(picholder!)
+                
+                
+            } else {
+                self.ref?.child(channel).child("Posts").childByAutoId().setValue(["Name": cUser?.displayName!, "Date": date, "Text": posttext])
+                
             }
-           // let upData = UIImagePNGRepresentation(picholder!)
+            
+            PostBox.text = ""
+            PostBox.endEditing(true)
+            PostButton.backgroundColor = PostBox.backgroundColor
+            CancelButton.backgroundColor = PostBox.backgroundColor
+            AddPic.backgroundColor = PostBox.backgroundColor
+            //print(" " + String(typing) + " why")
+            viewDidAppear(true)
             
             
-        } else {
-            self.ref?.child(channel).child("Posts").childByAutoId().setValue(["Name": cUser?.displayName!, "Date": date, "Text": posttext])
+            typing = false
+            usepic = false
+            picholder = UIImage()
+            TestImage.image = nil
+            waiting = true
+            let when2 = DispatchTime.now() + 10 // change 2 to desired number of seconds
+            DispatchQueue.main.asyncAfter(deadline: when2) {
+                //print("DISPATCH")
+                //self.Comments.reloadData()
+                self.waiting = false
+            }
+
             
         }
         
-        PostBox.text = ""
-        PostBox.endEditing(true)
-        PostButton.backgroundColor = PostBox.backgroundColor
-        CancelButton.backgroundColor = PostBox.backgroundColor
-        AddPic.backgroundColor = PostBox.backgroundColor
-        //print(" " + String(typing) + " why")
-        viewDidAppear(true)
         
-        
-        typing = false
-        usepic = false
-        picholder = UIImage()
-        TestImage.image = nil
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -401,6 +479,37 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
                                 
                             }
                         }).resume()
+                    } else {
+                    
+                        cell.Pic.image = UIImage()
+                        let idlabel = self.TableData[indexPath.row][3]
+                        self.ref?.child("Votes").child(idlabel).observeSingleEvent(of: .value, with: { (snapshot) in
+                            let usersDict = snapshot.value as? NSDictionary
+                            var count = 0
+                            if usersDict != nil {
+                                for vall in (usersDict?.allKeys)! {
+                                    if vall as! String == name {
+                                        
+                                    }
+                                    count += 1
+                                    if count == 1 {
+                                        cell.UpvoteLabel.text = "1 UPVOTE"
+                                    } else {
+                                        cell.UpvoteLabel.text = "\(count) UPVOTES"
+                                    }
+                                    
+                                }
+                            } else {
+                                cell.UpvoteLabel.text = "0 UPVOTES"
+                            }
+                            
+                            
+                        })
+                    
+                    
+                    
+                    
+                    
                     }
                     
                 }
@@ -430,7 +539,7 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
             let secondsSincePosted = -(newdate.timeIntervalSinceNow)
             //var toPresent: String?
             //let minutes = Int(secondsSincePosted / 60)
-            let timeleft = (6*3600) - secondsSincePosted
+            let timeleft = (8*3600) - secondsSincePosted
             if (timeleft < 0) {
                 //DateLabel.text = "LOCKED"
                 
@@ -483,7 +592,7 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
             let secondsSincePosted = -(newdate.timeIntervalSinceNow)
             //var toPresent: String?
             //let minutes = Int(secondsSincePosted / 60)
-            let timeleft = (6*3600) - secondsSincePosted
+            let timeleft = (8*3600) - secondsSincePosted
             if (timeleft < 0) {
                 //DateLabel.text = "LOCKED"
                 
@@ -566,6 +675,36 @@ class PostFeedViewController: UIViewController, UITextViewDelegate, UIGestureRec
                                     
                                 }
                             }).resume()
+                        } else {
+                        
+                        
+                            cell.ProfilePic.image = UIImage()
+                            let idlabel = self.TableData[indexPath.row][4]
+                            self.ref?.child("Votes").child(idlabel).observeSingleEvent(of: .value, with: { (snapshot) in
+                                let usersDict = snapshot.value as? NSDictionary
+                                var count = 0
+                                if usersDict != nil {
+                                    for vall in (usersDict?.allKeys)! {
+                                        if vall as! String == name {
+                                            
+                                        }
+                                        count += 1
+                                        if count == 1 {
+                                            cell.UpvoteLabel.text = "1 UPVOTE"
+                                        } else {
+                                            cell.UpvoteLabel.text = "\(count) UPVOTES"
+                                        }
+                                        
+                                    }
+                                } else {
+                                    cell.UpvoteLabel.text = "0 UPVOTES"
+                                }
+                                
+                                
+                            })
+                        
+                        
+                        
                         }
              
                         

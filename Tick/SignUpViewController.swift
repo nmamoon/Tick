@@ -47,6 +47,10 @@ class SignUpViewController: UIViewController {
             dest.startpic = true
             //print("YES")
         }
+        if let dest = segue.destination as? LogControlViewController {
+            dest.tester = true
+        }
+        
     }
     
     
@@ -122,7 +126,7 @@ class SignUpViewController: UIViewController {
                                         self.present(alert, animated: true, completion: nil)
                                     } else {
                                         //print("here")
-                                        self.performSegue(withIdentifier: "FirstPic", sender: self)
+                                        self.performSegue(withIdentifier: "RegisterToEULA", sender: self)
                                     }
                                 })
                                 //                self.ref?.child("Users").childByAutoId().setValue(["Name": name, "Latitude": 0, "Longitude": 0])

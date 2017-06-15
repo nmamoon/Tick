@@ -34,6 +34,18 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
     
     @IBOutlet weak var PostButton: UIButton!
     
+    
+    @IBOutlet weak var ReportButton: UIButton!
+    
+    
+    
+    
+    @IBOutlet weak var XButton: UIButton!
+    
+    
+    @IBOutlet weak var HideButton: UIButton!
+    
+    
     var ref:FIRDatabaseReference?
     let myname = FIRAuth.auth()?.currentUser?.displayName
     
@@ -72,6 +84,9 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
         UpvoteCount.layer.cornerRadius = 15
         UpvoteButton.layer.cornerRadius = 15
         PostButton.layer.cornerRadius = 15
+        ReportButton.layer.cornerRadius = 15
+        XButton.layer.cornerRadius = 15
+        HideButton.layer.cornerRadius = 15
         ContentLabel.layer.masksToBounds = true
         ContentLabel.layer.cornerRadius = 15
         IDLabel.layer.masksToBounds = true
@@ -115,7 +130,7 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
             toPresent = "Posted \(minutes / 1440) days ago"
         }
         IDLabel.text = toPresent
-        let timeleft = (6*3600) - secondsSincePosted
+        let timeleft = (8*3600) - secondsSincePosted
         
         if (timeleft < 0) {
             locked = true
@@ -360,7 +375,7 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
             toPresent = "Posted \(minutes / 1440) days ago"
         }
         IDLabel.text = toPresent
-        let timeleft = (6*3600) - secondsSincePosted
+        let timeleft = (8*3600) - secondsSincePosted
         
         if (timeleft < 0) {
             locked = true
@@ -401,7 +416,7 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
             toPresent = "Posted \(minutes / 1440) days ago"
         }
         IDLabel.text = toPresent
-        let timeleft = (6*3600) - secondsSincePosted
+        let timeleft = (8*3600) - secondsSincePosted
         
         if (timeleft < 0) {
             DateLabel.text = "LOCKED"
@@ -448,7 +463,31 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
         
         if !locked! && !commented! {
               performSegue(withIdentifier: "ImagePostToComment", sender: self)
+        } else {
+            if commented! {
+                print("yes1")
+                ref?.child("Decider").observeSingleEvent(of: .value, with: { (snapshot) in
+                    let info = snapshot.value as? String
+                    print("yes2")
+                    if info != nil {
+                        print(info)
+                        //bootest = false
+                        if info! == "true" {
+                            print("yes4")
+                            self.ref?.child("Comments").child(self.idlab!).child(self.myname!).removeValue()
+                            self.viewDidAppear(true)
+                            
+                        }
+                    }
+                    
+                    
+                    
+                    
+                })
+                
+            }
         }
+
       
     }
     
@@ -693,6 +732,89 @@ class ImagePostViewController: UIViewController, UITableViewDelegate, UITableVie
             
             
         }
+    }
+    
+    func sOver() {
+        //viewDidLoad()
+        //gameOver = true
+    }
+    
+    @IBAction func ReportPressed(_ sender: UIButton) {
+        self.ref?.child("Reports").child(idlab!).setValue("Reported")
+        let popup = UIAlertController(
+            title: "This Post has been reported.",
+            message: "Thank you for your report. We will review the content and the comments as soon as possible. If you have further questions, please contact us at tick.app.contact@gmail.com.",
+            preferredStyle: .alert)
+        
+        let exit = UIAlertAction(title: "Ok", style: .default) {
+            action in self.sOver() }
+        
+        popup.addAction(exit)
+        
+        //print("Well we are here!")
+        
+        self.present(popup, animated:true)
+        
+    }
+    
+    
+    @IBAction func XPressed(_ sender: UIButton) {
+        
+        if namelab == FIRAuth.auth()?.currentUser?.displayName! || FIRAuth.auth()?.currentUser?.displayName! == "nmamoon" {
+            self.ref?.child(channel).child("Posts").child(idlab!).removeValue()
+            print("done")
+            self.navigationController?.isNavigationBarHidden = true
+            self.navigationController?.setNavigationBarHidden(true, animated: false)
+            self.tabBarController?.tabBar.isHidden = true
+            performSegue(withIdentifier: "ToMain", sender: self)
+        } else {
+            let popup = UIAlertController(
+                title: "This is not your post!",
+                message: "You cannot remove a post that isn't yours. If you object to the material, please hide if from your feed, or use the report button.",
+                preferredStyle: .alert)
+            
+            let exit = UIAlertAction(title: "Ok", style: .default) {
+                action in self.sOver() }
+            
+            popup.addAction(exit)
+            
+            //print("Well we are here!")
+            
+            self.present(popup, animated:true)
+            
+        }
+
+        
+    }
+    
+  
+    @IBAction func hidePressed(_ sender: UIButton) {
+        self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.displayName)!).child("Hidings").child(idlab!).setValue("HIDDEN")
+        
+        
+        self.ref?.child("Users").child((FIRAuth.auth()?.currentUser?.displayName)!).child("Hidings").observeSingleEvent(of: .value, with: { (snapshot) in
+            let usersDict = snapshot.value as? NSDictionary
+            
+            if usersDict != nil {
+                hidePosts = [String]()
+                for vall in (usersDict?.allKeys)! {
+                    hidePosts.append(vall as! String)
+                    
+                }
+                //self.performSegue(withIdentifier: "ToMain", sender: self)
+                //self.MyTable.reloadData()
+            } else {
+                //cell.UpvoteLabel.text = "0 UPVOTES"
+            }
+            
+            
+            
+        })
+        self.navigationController?.isNavigationBarHidden = true
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+        self.tabBarController?.tabBar.isHidden = true
+        performSegue(withIdentifier: "ToMain", sender: self)
+        
     }
     
 

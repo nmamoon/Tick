@@ -59,7 +59,7 @@ class SignInViewController: UIViewController {
                 alert.addAction(UIAlertAction(title: "Okay!", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
             } else {
-                self.performSegue(withIdentifier: "SignInToMain", sender: self)
+                self.performSegue(withIdentifier: "SignInToEULA", sender: self)
             }
         })
     }

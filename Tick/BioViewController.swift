@@ -391,7 +391,7 @@ class BioViewController: UIViewController, UIImagePickerControllerDelegate, UINa
     }
     
     @IBAction func LogOut(_ sender: UIButton) {
-        print("sign out button tapped")
+        //print("sign out button tapped")
         let firebaseAuth = FIRAuth.auth()
         do {
             try firebaseAuth?.signOut()
